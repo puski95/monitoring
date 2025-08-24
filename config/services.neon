@@ -1,0 +1,13 @@
+services:
+	database.default: Nette\Database\Connection('mysql:host=localhost;dbname=managetik', 'root', '')
+	- App\Core\RouterFactory::createRouter
+	- Authenticator
+	- App\Model\Accounts
+	- App\Model\Config
+	- App\Model\Email
+
+search:
+	-	in: %appDir%
+		classes:
+			- *Factory
+			- *Facade

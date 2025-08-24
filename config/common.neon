@@ -1,0 +1,56 @@
+parameters:
+
+http:
+	headers:
+		X-Powered-By: ''
+
+application:
+	errorPresenter:
+		4xx: Error:Error4xx
+		5xx: Error:Error5xx
+	mapping: App\UI\*\**Presenter
+
+
+database:
+	dsn: 'mysql:host=localhost;dbname=managetik'
+	user: "root"
+	password: ""
+
+
+latte:
+	strictTypes: yes
+	strictParsing: yes
+	extensions:
+		- App\UI\Accessory\LatteExtension
+		- Latte\Essential\TranslatorExtension(@Nette\Localization\Translator)
+
+
+di:
+	export:
+		parameters: no
+		tags: no
+
+session:
+	debugger: true
+
+	expiration: 14 days
+	save_path: %tempDir%/session
+	autoStart: always
+
+extensions:
+	recaptcha: Contributte\ReCaptcha\DI\ReCaptchaExtension
+	translation: Contributte\Translation\DI\TranslationExtension
+
+recaptcha:
+	secretKey: ''
+	siteKey: ''
+
+translation:
+	locales:
+		whitelist: [en, cs]
+		default: en
+		fallback: [en]
+	dirs:
+		- %appDir%/lang
+	returnOriginalMessage: true # to not translate undefined messages, default is true	
+	

@@ -1,0 +1,102 @@
+.homepage-nav {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.homepage-nav-content {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1200px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.homepage-nav-content .logo {
+    cursor: pointer;
+    color: var(--black);
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 7px;
+    color: var(--grey-lighter);
+}
+.homepage-nav-content .logo i {
+    font-size: 1.5rem;
+}
+
+.homepage-nav-content .locale {
+    all: unset;
+    cursor: pointer;
+    color: var(--grey-lighter);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 7px;
+}
+
+.homepage-nav-content .nav-button {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: 500;
+    padding: 5px 10px 5px 10px;
+    background-color: transparent;
+    border: 2px solid transparent;
+    border-radius: 5px;
+}
+
+.homepage-nav-content .nav-button:hover {
+    background-color: var(--white);
+    color: var(--primary-color);
+}
+
+.homepage-nav-content .button {
+    white-space: nowrap;
+    color: var(--primary-color);
+    background-color: var(--white);
+    border: 2px solid var(--white);
+    border-radius: 5px;
+    padding: 6px 15px 6px 15px;
+    text-decoration: none;
+}
+
+.homepage-nav-content .button:hover {
+    background-color: transparent;
+    color: var(--white);
+}
+
+
+/*NETTE FORMS MODAL*/
+
+.netteFormsModal {
+    box-sizing: border-box !important;
+    border: 0px !important;
+    box-shadow: var(--box-shadow) !important;
+    border-radius: 5px !important;
+    padding: 15px 50px 15px 50px !important;
+    line-height: 1.5 !important;
+    font-weight: 500;
+}
+
+.netteFormsModal button {
+    all: unset;
+    cursor: default;
+    box-sizing: border-box;
+    width: 100px;
+    padding: 5px !important;
+    font-size: 0.85rem;
+    color: var(--white);
+    background-color: var(--primary-color);
+    border-radius: 4px;
+}
+
+.netteFormsModal button:hover {
+    opacity: 0.7;
+}

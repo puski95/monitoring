@@ -1,0 +1,32 @@
+{block content}
+
+<main n:snippet="content" class="column align-center">
+
+    <div class="auth-container">
+
+        {form loginForm}
+
+            <div class="column align-center gap-20 justify-center">               
+                <h1>Log in</h1>
+                <small>Log in to your account.</small>
+            </div>
+
+            {input username, "class" => "input", "placeholder" => "Username"}
+            {input password, "class" => "input", "placeholder" => "Password"}
+
+            <a n:href=":forgotten-password" class="fit-content margin-auto">Forgotten Password</a>
+            <a n:href=":signup" class="fit-content margin-auto">Don't have an account yet?</a>
+
+             {input submit, "class" => "ajax btn margin-top-30", "value" => "Log in"}
+
+        
+        {/form}
+
+    </div>
+
+</main>
+
+{include footer from '../include.latte'}
+
+
+{/block}

@@ -1,0 +1,76 @@
+{
+    "name": "HNelektro",
+    "short_name": "HNelektro App",
+    "description": "HNelektro App",
+    "start_url": "/",
+    "id": "/",
+    "display": "standalone",
+    "background_color": "#fff",
+    "theme_color": "#fff",
+    "icons": [
+      {
+        "src": "/logo.png",
+        "sizes": "192x192",
+        "type": "image/png",
+        "purpose": "any"
+      },
+      {
+        "src": "/logo.png",
+        "sizes": "96x96",
+        "type": "image/png",
+        "purpose": "any"
+      },
+      {
+        "src": "logo.png",
+        "sizes": "32x32",
+        "type": "image/png",
+        "purpose": "any"
+      },
+      {
+        "src": "/logo.png",
+        "sizes": "16x16",
+        "type": "image/png",
+        "purpose": "any"
+      },
+      {
+        "src": "/logo.png",
+        "sizes": "180x180",
+        "type": "image/png",
+        "purpose": "any"
+      },
+      {
+        "src": "/logo.png",
+        "sizes": "152x152",
+        "type": "image/png",
+        "purpose": "any"
+      },
+      {
+        "src": "/logo.png",
+        "sizes": "120x120",
+        "type": "image/png",
+        "purpose": "any"
+      },
+      {
+        "src": "/logo.png",
+        "sizes": "76x76",
+        "type": "image/png",
+        "purpose": "any"
+      }
+    ],
+    "screenshots": [
+      {
+        "src": "/img/screen1.jpg",
+        "sizes": "640x320",
+        "type": "image/png",
+        "form_factor": "wide",
+        "label": "Home App"
+      },
+      {
+        "src": "/img/screen1.jpg",
+        "sizes": "640x320",
+        "type": "image/png",
+        "form_factor": "narrow",
+        "label": "Home App"
+      }
+    ]
+  }

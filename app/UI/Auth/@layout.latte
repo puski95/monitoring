@@ -1,0 +1,60 @@
+{spaceless}
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<meta name="robots" content="noindex">
+	<meta name="description" content="">
+	<link href='https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Oleo Script' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i' rel='stylesheet'>
+	<link rel='stylesheet' href='/css/fontawesome/css/all.min.css'>
+	<link rel="stylesheet" href="/css/color.css?v={time()}">
+	<link rel="stylesheet" href="/css/global.css?v={time()}">
+	<link rel="stylesheet" href="/css/animate.css?v={time()}">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico?v={time()}">
+	<!--<link rel='manifest' href='/manifest.json?v={time()}'>-->
+	<script src="/js/jquery.js"></script>
+    <script src="/js/ajax.js"></script>
+	<script src="/js/chart.js"></script>
+	<script src="/js/cookies.js?v={time()}"></script>
+
+	<title>{ifset title}{include title|stripHtml} | {/ifset}ManageTik</title>
+
+	
+</head>
+
+<noscript>Turn on JavaScript</noscript>
+
+<body n:snippet="body">
+
+	<div n:snippet="flash" class="cms-flashes">
+		{var $count = 1}
+		{var $timeout = 8000}
+		{foreach $flashes as $flash}
+			<div id="flash-{$count}" class="cms-flash {$flash->type} animate__animated animate__bounceInDown" onclick="hideFlash(this)">
+				<span class="title">NOTIFICATION</span>
+				<span class="flash-message">{$flash->message}</span>
+			</div>
+			<script type="text/javascript">
+				setTimeout(() => {
+					document.getElementById("flash-"+{$count}).click();
+				}, {$timeout});
+			</script>
+			{var $count = $count + 1}
+			{var $timeout = $timeout + 2500}
+		{/foreach}
+	</div>
+
+	{include content}
+	
+	{block scripts}
+	<script src="/js/forms.js?v={time()}"></script>
+	<script src="/js/script.js?v={time()}"></script>
+	<script src="https://www.google.com/recaptcha/api.js"></script>
+	{/block}
+</body>
+</html>
+{/spaceless}

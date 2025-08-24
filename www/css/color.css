@@ -1,0 +1,43 @@
+:root {
+    --primary-color: #3B8ADE;
+    --primary-color-opacity: rgb(77, 40, 240, 0.2);
+    --secondary-color: #104781;
+    --secondary-color-opacity: rgb(109, 74, 255, 0.1);
+    --background: #f7f5ff;
+    --text: #fff;
+    --white: #fff;
+    --whitesmoke: whitesmoke;
+    --white-darker: #f3f3f3;
+    --white-grey: #ebeaea;
+    --black: rgb(56, 56, 56);
+    --black-black: black;
+    --black-opacity: rgba(24, 24, 24, 0.89);
+    --dark: rgb(90, 90, 90);
+    --dark-lighter: rgb(41, 41, 41);
+    --red: #ff0000;
+    --green: #0f9e02;
+    --orange: #df9408;
+    --grey: rgb(150, 150, 150);
+    --grey-lighter: rgb(226, 226, 226);
+    --carky: #6f04d9;
+    --col: #114983;
+    --gradient: linear-gradient(#28195a, #db545a);
+    --box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    --box-shadow2: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    --border: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;;
+}
+
+@font-face {
+    font-family: 'Masifa';
+    src: url('/css/Masifa.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Tusker';
+    src: url('/css/Tusker.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Myriad';
+    src: url('/css/Myriad.otf') format('opentype');
+}
