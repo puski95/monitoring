@@ -1,5 +1,5 @@
 services:
-	database.default: Nette\Database\Connection('mysql:host=localhost;dbname=managetik', 'root', '')
+	database.default: Nette\Database\Connection('sqlite:%appDir%/Database/database.db', 'root', '')
 	- App\Core\RouterFactory::createRouter
 	- Authenticator
 	- App\Model\Accounts

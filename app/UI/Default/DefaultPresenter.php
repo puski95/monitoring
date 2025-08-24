@@ -16,16 +16,6 @@ final class DefaultPresenter extends Nette\Application\UI\Presenter
     protected function startup()
     {
         parent::startup();
-
-        if ($this->config->maintenance() && $this->action != "maintenance") {
-            if (isset($this->getUser()->getIdentity()->admin) && $this->getUser()->getIdentity()->admin) {
-                # admin access
-            } else {
-                $this->redirect(':maintenance');
-            }
-        }
-
-        $this->template->config = $this->config->getConfig();
         
     }
 
@@ -40,17 +30,6 @@ final class DefaultPresenter extends Nette\Application\UI\Presenter
 	{
 		
 	}
-
-    public function renderMaintenance(): void
-    {
-        if (!$this->config->maintenance()) {
-            $this->redirect(':default');
-        }
-        if (isset($this->getUser()->getIdentity()->admin) && $this->getUser()->getIdentity()->admin) {
-            $this->redirect(':default');
-        }
-    }
-
 
 	protected function createComponentContactForm(): Form
 	{

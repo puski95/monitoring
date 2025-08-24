@@ -12,7 +12,7 @@ application:
 
 
 database:
-	dsn: 'mysql:host=localhost;dbname=managetik'
+	dsn: 'sqlite:%appDir%/Database/database.db'
 	user: "root"
 	password: ""
 

@@ -1,1 +1,3 @@
-blabla
+#gitignore
+/temp
+/log
