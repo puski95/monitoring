@@ -12,7 +12,7 @@ application:
 
 
 database:
-	dsn: 'sqlite:%appDir%/Database/database.db'
+	dsn: 'mysql:host=192.168.50.254;dbname=home'
 	user: "root"
 	password: ""
 

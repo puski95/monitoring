@@ -31,6 +31,11 @@ final class DefaultPresenter extends Nette\Application\UI\Presenter
 		
 	}
 
+	public function renderAdminer(): void {
+		require_once("../adminer/adminer-5.3.0-cs.php");
+		$this->terminate();
+	}
+
 	protected function createComponentContactForm(): Form
 	{
 		$form = new Form;
