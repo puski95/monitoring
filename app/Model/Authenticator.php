@@ -24,15 +24,8 @@ class Authenticator implements \Nette\Security\Authenticator
             throw new \Nette\Security\AuthenticationException('Wrong password.');
         }
 
-        if ($user->two_factor) {
-            $twoFactor = 'required';
-        } else {
-            $twoFactor = null;
-        }
-
         return new \Nette\Security\SimpleIdentity($user->id, null, ['username' => $user->username,
-                                                                    'admin' => $user->admin,
-                                                                    'twoFactor' => $twoFactor]);
+                                                                    'admin' => $user->admin]);
     }
 
 }

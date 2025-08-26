@@ -69,7 +69,7 @@ function editProfileAvatar(input) {
     }
 }
 
-const ajaxLinks = document.querySelectorAll('a.ajax');
+const ajaxLinks = document.querySelectorAll('a.ajaxlink');
 
 ajaxLinks.forEach(link => {
     link.addEventListener('click', function(e) {
