@@ -68,3 +68,13 @@ function editProfileAvatar(input) {
         result.innerHTML = '';
     }
 }
+
+const ajaxLinks = document.querySelectorAll('a.ajax');
+
+ajaxLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+        history.pushState(null, '', link.href);
+    });
+});
+

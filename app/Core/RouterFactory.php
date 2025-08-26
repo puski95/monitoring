@@ -15,8 +15,8 @@ final class RouterFactory
 	public static function createRouter(): RouteList
 	{
 		$router = new RouteList;
-		$router->addRoute('adminer', 'Default:adminer');
-		$router->addRoute('[<locale=en en|cs>/]<presenter>/<action>[/<id>]', 'Default:default');
+		$router->addRoute('[<view>][/<id>]', 'App:default');
+		//$router->addRoute('[<locale=en en|cs>/]<presenter>/<action>[/<id>]', 'Default:default');
 		return $router;
 	}
 }

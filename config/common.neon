@@ -12,9 +12,9 @@ application:
 
 
 database:
-	dsn: 'mysql:host=192.168.50.254;dbname=home'
-	user: "root"
-	password: ""
+	dsn: 'mysql:host=192.168.50.254;dbname=monitoring_test'
+	user: "webtest"
+	password: "Hello9919*"
 
 
 latte:

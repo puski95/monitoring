@@ -15,14 +15,14 @@ body {
     min-height: 100dvh;
     min-height: 100svh;
     background-color: whitesmoke !important;
-    background-image: url('/img/svg4.svg');
+    /*background-image: url('/img/svg4.svg');*/
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
     flex-direction: column;
     align-items: center;
     font-weight: 300;
-    color: var(--white);
+    color: var(--black);
 }
 
 @media screen and (max-width:600px){
@@ -37,7 +37,7 @@ iframe {
 
 main {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1440px;
     flex-grow: 1;
     display: flex;
     flex-direction: column;

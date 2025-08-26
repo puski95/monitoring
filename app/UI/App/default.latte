@@ -1,0 +1,38 @@
+{block content}
+
+<main n:snippet="content">
+
+    {if $user->isLoggedIn()}
+
+        <div class="row gap-10">
+            
+            <a n:href=": dashboard" class="ajax" data-nette-ajax="true" rel="history">Dashboard</a>
+            <a n:href=": host" class="ajax" data-nette-ajax="true" rel="history">Hosté</a>
+            <a n:href=": settings" class="ajax" data-nette-ajax="true" rel="history">Nastavení</a>
+
+        </div>
+
+    {/if}
+
+    {switch $view}
+        {case host}
+            Hosts
+        {case settings}
+            Nastavení
+        {case login}
+            Login    
+        {default}
+            Dashboard
+    {/switch}
+
+
+
+
+
+    {ifset $js}
+        {$js|noescape}
+    {/ifset}
+
+</main>
+
+{/block}
