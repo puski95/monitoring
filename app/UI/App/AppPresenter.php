@@ -49,6 +49,10 @@ final class AppPresenter extends Nette\Application\UI\Presenter
             $this->template->js = $this->javascript();
     	}
 
+		if ($view === "hosts") {
+			$this->template->hosts = null;
+		}
+
 
 	}
 

@@ -1,9 +1,13 @@
 {block login}
 
     {form loginForm, "class" => "ajax login-form"}
-        {input username, "placeholder" => "E-mail"}
-        {input password, "placeholder" => "Heslo"}
-        {input submit, "value" => "Přihlásit se"}    
+        <div class="login-logo">
+            <i class="fa-solid fa-building-shield"></i>
+            <span>CheckMe</span>
+        </div>
+        {input username, "class" => "login-input", "placeholder" => "Uživatelské jméno"}
+        {input password, "class" => "login-input", "placeholder" => "Heslo"}
+        {input submit, "class" => "login-btn", "value" => "Přihlásit se"}    
     {/form}
 
 

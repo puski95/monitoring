@@ -16,24 +16,113 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     padding: 2px;
     font-size: 0.8rem;
+    flex-grow: 1;
 }
 
 
 /*LOGIN FORM*/
 .login-form {
+    margin-top: 20vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: auto;
+    gap: 25px;
+}
+
+.login-logo {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 5px;
+    margin-bottom: 30px;
+}
+
+.login-logo i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+}
+
+.login-logo span {
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.login-input {
+   all: unset; 
+   box-sizing: border-box;
+   width: 100%;
+   max-width: 300px;
+   padding: 15px 20px 15px 20px;
+   border: 1px solid var(--grey-lighter);
+   border-radius: 10px;
+   transition: 0.3s ease-in-out;
+}
+
+.login-input:focus {
+    box-shadow: 0px 0px 5px 0px var(--primary-color);
+}
+
+.login-btn {
+    all: unset;
+    cursor: pointer;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 300px;
+    padding: 8px 20px 8px 20px;
+    border: 2px solid var(--primary-color);
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.login-btn:hover {
+    opacity: 0.7;
+}
+
+/*FLASH*/
+.app-flashes {
+    position: absolute;
+    top: 15px;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    z-index: 99999;
+}
+.app-flash {
+    cursor: default;
+    box-sizing: border-box;
+    width: 100vw;
+    max-width: 350px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
     gap: 10px;
-    padding: 20px;
-    height: 250px;
-    background-color: var(--white);
-    border-radius: 7px;
-    box-shadow: var(--box-shadow);
+    border: 1px solid;
+    border-right: none;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+}
+.app-flash.error {
+    background-color: rgba(255, 0, 0, 0.2);
+    color: var(--red);
+}
+.app-flash.success {
+    background-color: rgba(35, 232, 25, 0.2);
+    color: var(--green);
+}
+.app-flash.warning {
+    background-color: rgba(255, 130, 57, 0.2);
+    color: var(--orange);
+}
+.flash-message {
+    flex-grow: 1;
 }
 
 /*NETTE FORMS MODAL*/

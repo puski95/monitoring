@@ -34,21 +34,19 @@
 
 <body n:snippet="body">
 
-	<div n:snippet="flash" class="cms-flashes">
-		{var $count = 1}
-		{var $timeout = 4000}
+	<div n:snippet="flash" class="app-flashes">
 		{foreach $flashes as $flash}
-			<div id="flash-{$count}" class="cms-flash {$flash->type} animate__animated animate__bounceInDown" onclick="hideFlash(this)">
-				<span class="title">NOTIFIKACE</span>
+			<div class="app-flash {$flash->type} animate__animated animate__bounceInRight" onclick="hideFlash(this)">
+				{if $flash->type === "error"}
+					<i class="fa-solid fa-circle-xmark red flash-icon"></i>
+				{elseif $flash->type === "success"}
+					<i class="fa-solid fa-circle-check green flash-icon"></i>
+				{elseif $flash->type === "warning"}
+					<i class="fa-solid fa-triangle-exclamation orange flash-icon"></i>
+				{/if}
 				<span class="flash-message">{$flash->message}</span>
+				<i class="fa-solid fa-x flash-close"></i>
 			</div>
-			<script type="text/javascript">
-				setTimeout(() => {
-					document.getElementById("flash-"+{$count}).click();
-				}, {$timeout});
-			</script>
-			{var $count = $count + 1}
-			{var $timeout = $timeout + 2000}
 		{/foreach}
 	</div>
 

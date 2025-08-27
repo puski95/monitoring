@@ -27,10 +27,7 @@ function jumpNext(currentField) {
 
 /*CMS*/
 function hideFlash(element) {
-    element.classList.replace("animate__bounceInDown", "animate__bounceOutUp");
-    setTimeout(() => {
-        element.style.display = "none";
-    }, 1000);
+    element.style.display = "none";
 }
 function submitBtn(button) {
     const innerHTML = button.innerHTML;
