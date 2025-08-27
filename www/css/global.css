@@ -37,11 +37,9 @@ iframe {
 
 main {
     width: 100%;
-    max-width: 1440px;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    padding: 15px;
     gap: 10px;
     z-index: 1;
 }

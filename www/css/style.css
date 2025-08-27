@@ -1,5 +1,40 @@
+/*NAVIGATION*/
+
+.app-navigation {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid var(--grey-lighter);
+}
+
+/*FOOTER*/
+.footer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 2px;
+    font-size: 0.8rem;
+}
 
 
+/*LOGIN FORM*/
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    gap: 10px;
+    padding: 20px;
+    height: 250px;
+    background-color: var(--white);
+    border-radius: 7px;
+    box-shadow: var(--box-shadow);
+}
 
 /*NETTE FORMS MODAL*/
 

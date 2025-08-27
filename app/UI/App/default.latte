@@ -4,14 +4,8 @@
 
     {if $user->isLoggedIn()}
 
-        <div class="row gap-10">
-            
-            <a n:href=": dashboard" class="ajax ajaxlink">Dashboard</a>
-            <a n:href=": host" class="ajax ajaxlink">Hosté</a>
-            <a n:href=": settings" class="ajax ajaxlink">Nastavení</a>
-
-        </div>
-
+        {include navigation}
+        
     {/if}
 
     {switch $view}
@@ -38,5 +32,30 @@
     {/ifset}
 
 </main>
+
+{/block}
+
+{block navigation}
+
+<div class="app-navigation">
+
+    <a n:href="App:" class="ajax ajaxlink">CheckMe</a>
+    
+    <div class="links">        
+        <a n:href="App: dashboard" class="ajax ajaxlink">Dashboard</a>
+        <a n:href="App: host" class="ajax ajaxlink">Hosté</a>
+        <a n:href="App: settings" class="ajax ajaxlink">Nastavení</a>
+        <a n:href="App: logout" class="" onclick="return confirm('Opravdu se chcete odhlásit?')">Odhlášení</a>
+    </div>
+
+</div>
+
+{/block}
+
+{block footer}
+
+<footer class="footer">
+    CheckMe © 2024-{date("Y")}
+</footer>
 
 {/block}

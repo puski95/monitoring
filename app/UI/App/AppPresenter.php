@@ -105,7 +105,7 @@ final class AppPresenter extends Nette\Application\UI\Presenter
 			$this->redirect(':');
 
         } catch (Nette\Security\AuthenticationException $e) {
-            $this->flashMessage('Username or Password do not match.', 'error');
+            $this->flashMessage('Nesprávné přihlašovací údaje.', 'error');
             $this->redrawControl('flash');
         }
 	}	

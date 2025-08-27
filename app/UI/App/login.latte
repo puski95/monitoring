@@ -1,9 +1,12 @@
 {block login}
 
-    {form loginForm, "class" => "ajax"}
-        {input username}
-        {input password}
-        {input submit, "value" => login}    
+    {form loginForm, "class" => "ajax login-form"}
+        {input username, "placeholder" => "E-mail"}
+        {input password, "placeholder" => "Heslo"}
+        {input submit, "value" => "Přihlásit se"}    
     {/form}
 
+
+    {include footer from 'default.latte'}
+    
 {/block}
