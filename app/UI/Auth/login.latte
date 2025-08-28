@@ -1,5 +1,7 @@
 {block content}
 
+<main n:snippet="content">
+
     {form loginForm, "class" => "ajax login-form"}
         <div class="login-logo">
             <i class="fa-solid fa-building-shield"></i>
@@ -12,5 +14,7 @@
 
 
     {include footer from '../App/default.latte'}
+
+</main>    
     
 {/block}
