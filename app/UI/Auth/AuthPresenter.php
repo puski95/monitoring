@@ -118,7 +118,7 @@ final class AuthPresenter extends Nette\Application\UI\Presenter
 			$this->redirect(':');
 
         } catch (Nette\Security\AuthenticationException $e) {
-            $this->flashMessage('Nesprávné přihlašovací údaje.', 'error');
+            $this->flashMessage('Login credentials are incorrect.', 'error');
             $this->redrawControl('flash');
         }
 	}	

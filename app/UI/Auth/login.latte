@@ -1,15 +1,15 @@
 {block content}
 
-<main n:snippet="content">
+<main n:snippet="content" class="white-background">
 
     {form loginForm, "class" => "ajax login-form"}
         <div class="login-logo">
             <i class="fa-solid fa-building-shield"></i>
             <span>CheckMe</span>
         </div>
-        {input username, "class" => "login-input", "placeholder" => "Uživatelské jméno"}
-        {input password, "class" => "login-input", "placeholder" => "Heslo"}
-        {input submit, "class" => "login-btn", "value" => "Přihlásit se"}    
+        {input username, "class" => "login-input", "placeholder" => "Username"}
+        {input password, "class" => "login-input", "placeholder" => "Password"}
+        {input submit, "class" => "login-btn", "value" => "Login"}    
     {/form}
 
 

@@ -1,13 +1,15 @@
 {block content}
 
-<main n:snippet="content">
+<main class="row flex-wrap" n:snippet="content">
 
-    {if $user->isLoggedIn()}
+    {include navigation}
 
-        {include navigation}
+    <div class="root">
         
-    {/if}
+        overview
 
+    </div>
+    
 </main>
 
 {/block}
@@ -16,13 +18,37 @@
 
 <div class="app-navigation">
 
-    <a n:href="App:" class="">CheckMe</a>
+    <a n:href="App:" class="nav-logo">
+        <i class="fa-solid fa-building-shield"></i>
+        <span>CheckMe</span>
+    </a>
+
+    <div class="nav-spacer"></div>
     
     <div class="links">        
-        <a n:href="App:" class="">Dashboard</a>
-        <a n:href="App:" class="">Hosté</a>
-        <a n:href="App:" class="">Nastavení</a>
-        <a n:href="Auth:logout" class="" onclick="return confirm('Opravdu se chcete odhlásit?')">Odhlášení</a>
+        <a n:href="App:" class="link {($presenter->name === 'App' ? 'active' : '')}">
+            <i class="fa-solid fa-qrcode"></i>
+            <span>Overview</span>
+        </a>
+        <a n:href="Hosts:" class="link {($presenter->name === 'Hosts' ? 'active' : '')}">
+            <i class="fa-solid fa-network-wired"></i>
+            <span>Hosts</span>
+        </a>
+        <a n:href="Settings:" class="link {($presenter->name === 'Settings' ? 'active' : '')}">
+            <i class="fa-solid fa-gears"></i>
+            <span>Settings</span>
+        </a>
+        <a n:href="Auth:logout" class="link">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <span>Logout</span>
+        </a>
+    </div>
+
+    <div class="nav-spacer"></div>
+
+    <div class="nav-bottom">
+        <span>Version: {$appVersion}</span>
+        <span>CheckMe © 2024-{date("Y")}</span>
     </div>
 
 </div>

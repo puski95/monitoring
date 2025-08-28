@@ -1,13 +1,95 @@
 /*NAVIGATION*/
 
 .app-navigation {
-    width: 100%;
+    position: sticky;
+    top: 0;
+    width: 200px;
+    height: 100vh;
+    height: 100svh;
+    height: 100dvh;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px;
+    flex-direction: column;
+    padding: 15px 15px 5px 15px;
+    background-color: var(--white);
+    border-right: 1px solid var(--grey-lighter);
+}
+
+.app-navigation .nav-spacer {
+    width: 100%;
     border-bottom: 1px solid var(--grey-lighter);
+    margin: 20px 0px 20px 0px;
+}
+
+.app-navigation .nav-logo {
+    all: unset;
+    box-sizing: border-box;
+    width: fit-content;
+    display: flex;
+    align-items: flex-end;
+    gap: 5px;
+}
+.app-navigation .nav-logo:hover {
+    opacity: 0.8;
+}
+.app-navigation .nav-logo i {
+    color: var(--primary-color);
+    font-size: 2.4rem;
+}
+.app-navigation .nav-logo span {
+    font-weight: 500;
+    font-size: 1.25rem;
+}
+
+.app-navigation .links {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.app-navigation .link {
+    all: unset;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 7px 13px 7px 13px;
+}
+
+.app-navigation .link:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-radius: 7px;
+}
+
+.app-navigation .link.active {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-radius: 7px;
+}
+
+.app-navigation .link i {
+    width: 20px;
+}
+
+.app-navigation .nav-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.7rem;
+    gap: 4px;
+}
+
+.app-navigation .nav-bottom span {
+    font-size: 0.8rem;
+}
+
+/*ROOT*/
+.root {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    background-color: var(--whitesmoke);
 }
 
 /*FOOTER*/
