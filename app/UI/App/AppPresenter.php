@@ -18,6 +18,7 @@ final class AppPresenter extends Nette\Application\UI\Presenter
     {
         parent::startup();
         
+		$this->protected();
     }
 
 	public function __construct(
@@ -29,30 +30,9 @@ final class AppPresenter extends Nette\Application\UI\Presenter
 
     public function renderDefault($view, $id): void
 	{
-		if (!$this->getUser()->isLoggedIn() && $view !== "login") {
-			$this->redirect("this", ["view" => "login"]);
-		}
-		if ($this->getUser()->isLoggedIn() && $view === "login") {
-			$this->redirect("this", ["view" => null]);
-		}
-		if ($view === "logout") {
-			$this->getUser()->logout(true);
-			$this->redirect("this", ["view" => "login"]);
-		}
 
 		$this->template->view = $view;
 		$this->template->id = $id;
-		$count = 0;
-
-		if ($this->isAjax() && !$this->getHttpRequest()->getQuery("do")) {
-			$this->redrawControl('content');
-            $this->template->js = $this->javascript();
-    	}
-
-		if ($view === "hosts") {
-			$this->template->hosts = null;
-		}
-
 
 	}
 
@@ -75,44 +55,6 @@ final class AppPresenter extends Nette\Application\UI\Presenter
 	/**
 	 * FORMS
 	 */
-
-	protected function createComponentLoginForm(): Form
-	{
-		$form = new Form;
-		$form->addText('username');
-        $form->addPassword('password');
-		$form->addSubmit('submit');
-		$form->onSuccess[] = [$this, 'loginFormProcess'];
-		return $form;
-	}
-
-	public function loginFormProcess(Form $form, $data): void
-	{
-		$values = $form->getValues();
-		
-        try {
-
-			if (isset($this->getUser()->getIdentity()->restricted)) {
-				try {
-					if ($this->getUser()->getIdentity()->restricted > date('Y-m-d H:i:s')) {
-						throw new \Exception("Too many error attempts, try again later.", 1);
-					}
-				} catch (\Exception $e) {
-					$this->flashMessage($e->getMessage(), 'error');
-					$this->redirect('this');
-				}
-			}
-
-            $this->getUser()->login($values->username, $values->password);
-			$this->getUser()->getIdentity()->restricted = false;
-
-			$this->redirect(':');
-
-        } catch (Nette\Security\AuthenticationException $e) {
-            $this->flashMessage('Nesprávné přihlašovací údaje.', 'error');
-            $this->redrawControl('flash');
-        }
-	}	
 
 	protected function createComponentContactForm(): Form
 	{

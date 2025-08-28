@@ -8,30 +8,6 @@
         
     {/if}
 
-    {switch $view}
-        {case host}
-            {include hosts from 'hosts.latte'}
-            
-
-        {case settings}
-            Nastavení
-
-        {case login}
-            {include login from 'login.latte'}
-
-        {default}
-            Dashboard
-            
-    {/switch}
-
-
-
-
-
-    {ifset $js}
-        {$js|noescape}
-    {/ifset}
-
 </main>
 
 {/block}
@@ -40,13 +16,13 @@
 
 <div class="app-navigation">
 
-    <a n:href="App:" class="ajax ajaxlink">CheckMe</a>
+    <a n:href="App:" class="">CheckMe</a>
     
     <div class="links">        
-        <a n:href="App: dashboard" class="ajax ajaxlink">Dashboard</a>
-        <a n:href="App: host" class="ajax ajaxlink">Hosté</a>
-        <a n:href="App: settings" class="ajax ajaxlink">Nastavení</a>
-        <a n:href="App: logout" class="" onclick="return confirm('Opravdu se chcete odhlásit?')">Odhlášení</a>
+        <a n:href="App:" class="">Dashboard</a>
+        <a n:href="App:" class="">Hosté</a>
+        <a n:href="App:" class="">Nastavení</a>
+        <a n:href="Auth:logout" class="" onclick="return confirm('Opravdu se chcete odhlásit?')">Odhlášení</a>
     </div>
 
 </div>

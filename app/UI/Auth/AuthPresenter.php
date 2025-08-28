@@ -38,7 +38,7 @@ final class AuthPresenter extends Nette\Application\UI\Presenter
 
     public function renderDefault(): void
 	{
-		$this->redirect('Default:');
+		$this->redirect('App:');
 	}
 
 	public function renderLogin(): void
@@ -115,14 +115,13 @@ final class AuthPresenter extends Nette\Application\UI\Presenter
             $this->getUser()->login($values->username, $values->password);
 			$this->getUser()->getIdentity()->restricted = false;
 
-			$this->redirect('Default:');
+			$this->redirect(':');
 
         } catch (Nette\Security\AuthenticationException $e) {
-            $this->flashMessage('Username or Password do not match.', 'error');
+            $this->flashMessage('Nesprávné přihlašovací údaje.', 'error');
             $this->redrawControl('flash');
         }
-
-	}
+	}	
 
 	protected function createComponentSignupForm(): Form
 	{

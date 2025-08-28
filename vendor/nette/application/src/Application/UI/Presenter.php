@@ -288,9 +288,6 @@ abstract class Presenter extends Control implements Application\IPresenter
 			$this->redirect('Auth:login');
 		}
 
-		if ($this->getUser()->getIdentity()->pin == 'required') {
-			$this->redirect('Auth:pin');
-		}
 	}
 
 	/**
