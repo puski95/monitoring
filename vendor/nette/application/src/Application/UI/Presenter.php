@@ -299,8 +299,11 @@ abstract class Presenter extends Control implements Application\IPresenter
 		$gitDir = __DIR__."/../../../../../../";
 		$tag = shell_exec('git --git-dir='.$gitDir.'/.git describe --tags --abbrev=0 2>/dev/null');
 		$hash = shell_exec('git --git-dir='.$gitDir.'/.git rev-parse --short HEAD 2>/dev/null');
+		$date = shell_exec('git --git-dir='.$gitDir.'/.git log -1 --format="%cd" --date=format:"%Y-%m-%d %H:%M:%S" HEAD 2>/dev/null');
+
     	$this->template->appVersion = $tag;
 		$this->template->appBuild = $hash;
+		$this->template->appBuildDate = $date;
 	}
 
 
