@@ -297,7 +297,7 @@ abstract class Presenter extends Control implements Application\IPresenter
 	protected function beforeRender()
 	{
 		$tag = shell_exec('git describe --tags --abbrev=0 2>/dev/null');
-    	$this->template->appVersion = $tag;
+    	$this->template->appVersion = $tag ?? "0.0.0";
 	}
 
 
