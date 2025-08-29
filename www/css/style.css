@@ -75,9 +75,9 @@
 .app-navigation .nav-bottom {
     display: flex;
     flex-direction: column;
-    align-items: center;
     font-size: 0.7rem;
     gap: 4px;
+    padding-bottom: 10px;
 }
 
 .app-navigation .nav-bottom span {

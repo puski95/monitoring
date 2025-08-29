@@ -296,9 +296,11 @@ abstract class Presenter extends Control implements Application\IPresenter
 	 */
 	protected function beforeRender()
 	{
-		$gitDir = __DIR__;
+		$gitDir = __DIR__."/../../../../../../";
 		$tag = shell_exec('git --git-dir='.$gitDir.'/.git describe --tags --abbrev=0 2>/dev/null');
-    	$this->template->appVersion = $tag ?? "0.0.0";
+		$hash = shell_exec('git --git-dir='.$gitDir.'/.git rev-parse --short HEAD 2>/dev/null');
+    	$this->template->appVersion = $tag;
+		$this->template->appBuild = $hash;
 	}
 
 

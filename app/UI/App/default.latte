@@ -47,8 +47,14 @@
     <div class="nav-spacer"></div>
 
     <div class="nav-bottom">
-        <span>Version: {$appVersion}</span>
-        <span>CheckMe © 2024-{date("Y")}</span>
+        <div class="row space-between">
+            <span>Version:</span>
+            <span>{$appVersion}</span>
+        </div>  
+        <div class="row space-between">
+            <span>Build:</span>
+            <span>{$appBuild}</span>
+        </div>    
     </div>
 
 </div>
