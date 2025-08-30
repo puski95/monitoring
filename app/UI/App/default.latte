@@ -1,17 +1,50 @@
 {block content}
 
-<main class="row flex-wrap" n:snippet="content">
+<main class="row" n:snippet="content">
 
     {include navigation}
 
     <div class="root">
         
+        {include root}
         
         
 
     </div>
     
 </main>
+
+{/block}
+
+{block root}
+
+    <div class="container height-fit-content">
+        <span class="title">Network Health</span>
+        
+        <div class="row space-around gap-50 margin-top-20">
+
+            <div class="column gap-10 text-center">
+                <span>Up</span>
+                <span class="text-size-1-5">0</span>
+            </div>
+
+            <div class="column gap-10 text-center">
+                <span>Down</span>
+                <span class="text-size-1-5">0</span>
+            </div>
+
+            <div class="column gap-10 text-center">
+                <span>Maintenance</span>
+                <span class="text-size-1-5">0</span>
+            </div>
+
+            <div class="column gap-10 text-center">
+                <span>Paused</span>
+                <span class="text-size-1-5">0</span>
+            </div>
+
+        </div>
+    </div>
 
 {/block}
 

@@ -263,7 +263,11 @@ main h3 {
 }
 
 .space-between {
-    justify-content: space-between;
+    justify-content: space-between !important;
+}
+
+.space-around {
+    justify-content: space-around !important;
 }
 
 .justify-center {
@@ -275,11 +279,16 @@ main h3 {
 }
 
 .full-width {
-    width: 100%;
+    width: 100% !important;
+    max-width: unset !important;
 }
 
 .fit-content {
     width: fit-content !important;
+}
+
+.height-fit-content {
+    height: fit-content !important;
 }
 
 .width-25 {
