@@ -53,7 +53,7 @@
     </div>
     
 
-    <div class="container full-width" style="height:100%">
+    <div class="container full-width" style="min-height:100%">
         <span class="title">Recent Issues</span>
         
         {if !$issues}
@@ -84,6 +84,10 @@
         <a n:href="Hosts:" class="link {($presenter->name === 'Hosts' ? 'active' : '')}">
             <i class="fa-solid fa-network-wired"></i>
             <span>Hosts</span>
+        </a>
+        <a n:href="Issues:" class="link {($presenter->name === 'Issues' ? 'active' : '')}">
+            <i class="fa-solid fa-triangle-exclamation"></i>
+            <span>Issues</span>
         </a>
         <a n:href="Settings:" class="link {($presenter->name === 'Settings' ? 'active' : '')}">
             <i class="fa-solid fa-gears"></i>
