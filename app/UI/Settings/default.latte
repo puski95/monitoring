@@ -1,15 +1,50 @@
 {block content}
 
-<main class="row flex-wrap" n:snippet="content">
+<main class="row" n:snippet="content">
 
     {include navigation from "../App/default.latte"}
 
-    <div class="root">
-        
-       settings
+    {include topNav from "default.latte"}
 
+    <div class="root margin">
+        a
+        
     </div>
-    
+
+
 </main>
+
+{/block}
+
+{block topNav}
+
+<div class="top-nav">
+
+    <a n:href=":" class="link {($presenter->action === 'default' ? 'active' : '')}">
+        <i class="fa-solid fa-gear"></i>
+        General
+    </a>
+    <a n:href=":users" class="link {($presenter->action === 'users' ? 'active' : '')}">
+        <i class="fa-solid fa-users-gear"></i>
+        Users
+    </a>
+    <a n:href=":tags" class="link {($presenter->action === 'tags' ? 'active' : '')}">
+    <i class="fa-solid fa-tags"></i>
+        Tags
+    </a>
+    <a n:href=":notification" class="link {($presenter->action === 'notification' ? 'active' : '')}">
+    <i class="fa-solid fa-comments"></i>
+        Notification
+    </a>
+    <a n:href=":maintenance" class="link {($presenter->action === 'maintenance' ? 'active' : '')}">
+        <i class="fa-solid fa-calendar-check"></i>
+        Maintenance
+    </a>
+    <a n:href=":scheduler" class="link {($presenter->action === 'scheduler' ? 'active' : '')}">
+        <i class="fa-solid fa-clock"></i>
+        Scheduler
+    </a>
+
+</div>
 
 {/block}
