@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace App\UI\Hosts;
+namespace App\UI\Profile;
 
 use Nette;
 use Nette\Application\UI\Form;
 use App\Model\Config;
 
-final class HostsPresenter extends Nette\Application\UI\Presenter
+final class ProfilePresenter extends Nette\Application\UI\Presenter
 {
 
 	private $id;

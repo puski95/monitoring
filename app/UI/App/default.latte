@@ -6,7 +6,8 @@
 
     <div class="root">
         
-        overview
+        
+        
 
     </div>
     
@@ -37,6 +38,13 @@
         <a n:href="Settings:" class="link {($presenter->name === 'Settings' ? 'active' : '')}">
             <i class="fa-solid fa-gears"></i>
             <span>Settings</span>
+        </a>
+
+        <div class="nav-spacer"></div>
+
+        <a n:href="Profile:" class="link {($presenter->name === 'Profile' ? 'active' : '')}">
+            <i class="fa-solid fa-user"></i>
+            <span>Profile</span>
         </a>
         <a n:href="Auth:logout" class="link">
             <i class="fa-solid fa-right-from-bracket"></i>

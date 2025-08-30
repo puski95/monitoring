@@ -12,7 +12,6 @@ final class AppPresenter extends Nette\Application\UI\Presenter
 {
 
 	private $id;
-	private int $ajaxRedrawCount = 0;
 
     protected function startup()
     {
@@ -28,10 +27,9 @@ final class AppPresenter extends Nette\Application\UI\Presenter
 
 	}
 
-    public function renderDefault($view, $id): void
+    public function renderDefault($id): void
 	{
 
-		$this->template->view = $view;
 		$this->template->id = $id;
 
 	}

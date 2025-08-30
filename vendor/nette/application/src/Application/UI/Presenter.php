@@ -1186,4 +1186,12 @@ abstract class Presenter extends Control implements Application\IPresenter
 	{
 		return $this->linkGenerator ?? throw new Nette\InvalidStateException('Unable to create link to other presenter, service PresenterFactory or Router has not been set.');
 	}
+
+
+
+	/**
+	 * CUSTOM METHODS
+	 */
+
+	
 }
