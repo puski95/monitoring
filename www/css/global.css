@@ -283,6 +283,10 @@ main h3 {
     max-width: unset !important;
 }
 
+.flex {
+    flex: 1 !important;
+}
+
 .fit-content {
     width: fit-content !important;
 }
