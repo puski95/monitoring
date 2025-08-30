@@ -301,6 +301,10 @@ abstract class Presenter extends Control implements Application\IPresenter
 		$hash = shell_exec('git --git-dir='.$gitDir.'/.git rev-parse --short HEAD 2>/dev/null');
 		$date = shell_exec('git --git-dir='.$gitDir.'/.git log -1 --format="%cd" --date=format:"%Y-%m-%d %H:%M:%S" HEAD 2>/dev/null');
 
+		if ($_SERVER["SERVER_NAME"] === "localhost") {
+			$tag = "N/A";
+		}
+
     	$this->template->appVersion = $tag;
 		$this->template->appBuild = $hash;
 		$this->template->appBuildDate = $date;
@@ -1193,5 +1197,5 @@ abstract class Presenter extends Control implements Application\IPresenter
 	 * CUSTOM METHODS
 	 */
 
-	
+
 }

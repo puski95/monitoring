@@ -12,6 +12,7 @@ final class AppPresenter extends Nette\Application\UI\Presenter
 {
 
 	private $id;
+	private $issues = null;
 
     protected function startup()
     {
@@ -31,6 +32,8 @@ final class AppPresenter extends Nette\Application\UI\Presenter
 	{
 
 		$this->template->id = $id;
+
+		$this->template->issues = $this->issues;
 
 	}
 

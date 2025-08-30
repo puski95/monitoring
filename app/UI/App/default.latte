@@ -22,7 +22,7 @@
     <div class="container">
         <span class="title">Network Health</span>
         
-        <div class="row space-around gap-50 flex-wrap margin-top-20">
+        <div class="row justify-center gap-50 flex-wrap margin-top-20">
 
             <div class="column gap-10 text-center">
                 <span>Up</span>
@@ -31,6 +31,11 @@
 
             <div class="column gap-10 text-center">
                 <span>Down</span>
+                <span class="text-size-1-5">0</span>
+            </div>
+
+            <div class="column gap-10 text-center">
+                <span>Acknowledged</span>
                 <span class="text-size-1-5">0</span>
             </div>
 
@@ -51,6 +56,9 @@
     <div class="container full-width" style="height:100%">
         <span class="title">Recent Issues</span>
         
+        {if !$issues}
+            <p class="margin-top-10">No data available...</p>
+        {/if}
         
     </div>
 
